@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BuildingBase">
+		<defName>SWO_CoalSteamBoiler</defName>
+		<label>coal steam boiler</label>
+		<description>Burns coal to produce steam. Must be periodically refuelled by hand.</description>
+		<thingClass>Building</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/SteamBoiler</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+            <damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+            <shadowData>
+                <volume>(1.93,1,1.69)</volume>
+                <offset>(-0.03,0,-0.1)</offset>
+            </shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<rotatable>false</rotatable>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>false</castEdgeShadows>
+        <fillPercent>0.9</fillPercent>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToBuild>2500</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<Beauty>-20</Beauty>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<canOverlapZones>false</canOverlapZones>
+		<size>(2,2)</size>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+		</building>
+		<costList>
+			<SWO_Brass>100</SWO_Brass>
+            <SWO_Copper>20</SWO_Copper>
+		</costList>
+		<comps>
+            <li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>5</fuelConsumptionRate>
+				<fuelCapacity>35.0</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>SWO_Coal</li>
+					</thingDefs>
+				</fuelFilter>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="PipeSystem.CompProperties_ResourceTrader">
+                <compClass>PipeSystem.CompResourceTrader</compClass>
+                <pipeNet>SWO_SteamNet</pipeNet>
+                <!-- 60,000 ticks per day, 0.8333 per 100 ticks, 500 per day for this tier boiler-->
+                <consumptionPerTick>-0.83333333333333333333333333333333</consumptionPerTick>
+            </li>
+            <li Class="CompProperties_Glower">
+                <glowRadius>6</glowRadius>
+                <glowColor>(217,112,33,0)</glowColor>
+            </li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>6</heatPerSecond>
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3</explosiveRadius>
+				<explosiveExpandPerFuel>0.95</explosiveExpandPerFuel>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<destroyThingOnExplosionSize>2</destroyThingOnExplosionSize>
+				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+				<wickTicks>70~150</wickTicks>
+			</li>
+		</comps>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<designationCategory>Power</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>SteamGeneration</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+    <ThingDef ParentName="BuildingBase">
+		<defName>SWO_WoodSteamBoiler</defName>
+		<label>wood steam boiler</label>
+		<description>Burns wood to produce steam. Must be periodically refuelled by hand.</description>
+		<thingClass>Building</thingClass>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/SteamBoiler</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+            <damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+            <shadowData>
+                <volume>(1.93,1,1.69)</volume>
+                <offset>(-0.03,0,-0.1)</offset>
+            </shadowData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<rotatable>false</rotatable>
+		<blockWind>true</blockWind>
+		<castEdgeShadows>false</castEdgeShadows>
+        <fillPercent>0.9</fillPercent>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToBuild>2500</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<Beauty>-20</Beauty>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<canOverlapZones>false</canOverlapZones>
+		<size>(2,2)</size>
+		<building>
+			<destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+		</building>
+		<costList>
+			<SWO_Brass>70</SWO_Brass>
+            <SWO_Bronze>30</SWO_Bronze>
+		</costList>
+		<comps>
+            <li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>20</fuelConsumptionRate>
+				<fuelCapacity>70.0</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</fuelFilter>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="PipeSystem.CompProperties_ResourceTrader">
+                <compClass>PipeSystem.CompResourceTrader</compClass>
+                <pipeNet>SWO_SteamNet</pipeNet>
+                <!-- 60,000 ticks per day, 0.8333 per 100 ticks, 500 per day for this tier boiler-->
+                <consumptionPerTick>-0.83333333333333333333333333333333</consumptionPerTick>
+            </li>
+            <li Class="CompProperties_Glower">
+                <glowRadius>6</glowRadius>
+                <glowColor>(217,112,33,0)</glowColor>
+            </li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>6</heatPerSecond>
+			</li>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3</explosiveRadius>
+				<explosiveExpandPerFuel>0.95</explosiveExpandPerFuel>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<destroyThingOnExplosionSize>2</destroyThingOnExplosionSize>
+				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+				<wickTicks>70~150</wickTicks>
+			</li>
+		</comps>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<designationCategory>Power</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>SteamGeneration</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+</Defs>

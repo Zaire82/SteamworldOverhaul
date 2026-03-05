@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RecipeDef>
+        <defName>RefineCopper</defName>
+        <label>refine copper</label>
+        <description>Smelt copper ore into pure copper.</description>
+        <jobString>Smelting copper.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <workAmount>1000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SWO_CopperOre</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>SWO_CopperOre</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <SWO_Copper>10</SWO_Copper>
+        </products>
+        <workSkill>Crafting</workSkill>
+        <displayPriority>0</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>RefineTin</defName>
+        <label>refine tin</label>
+        <description>Smelt tin ore into pure tin.</description>
+        <jobString>Smelting tin.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <workAmount>1000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SWO_TinOre</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>SWO_TinOre</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <SWO_Tin>10</SWO_Tin>
+        </products>
+        <workSkill>Crafting</workSkill>
+        <displayPriority>0</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>RefineZinc</defName>
+        <label>refine zinc</label>
+        <description>Smelt zinc ore into pure zinc.</description>
+        <jobString>Smelting zinc.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <workAmount>1000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SWO_ZincOre</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>SWO_ZincOre</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <SWO_Zinc>10</SWO_Zinc>
+        </products>
+        <workSkill>Crafting</workSkill>
+        <displayPriority>0</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>CastBrass</defName>
+        <label>cast brass</label>
+        <description>Cast copper and zinc into brass.</description>
+        <jobString>Casting brass.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <workAmount>2000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SWO_Copper</li>
+                    </thingDefs>
+                </filter>
+                <count>7</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SWO_Zinc</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>SWO_Copper</li>
+                <li>SWO_Zinc</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <SWO_Brass>10</SWO_Brass>
+        </products>
+        <workSkill>Crafting</workSkill>
+        <displayPriority>0</displayPriority>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>CastBronze</defName>
+        <label>cast bronze</label>
+        <description>Cast copper and tin into bronze.</description>
+        <jobString>Casting bronze.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <workAmount>2000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SWO_Copper</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SWO_Tin</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>SWO_Copper</li>
+                <li>SWO_Tin</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <SWO_Bronze>10</SWO_Bronze>
+        </products>
+        <workSkill>Crafting</workSkill>
+        <displayPriority>0</displayPriority>
+    </RecipeDef>
+
+
+    <RecipeDef>
+        <defName>Make_Coke</defName>
+        <label>make coke</label>
+        <description>Turn coal into coke.</description>
+        <jobString>Coking.</jobString>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <workAmount>2000</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>SWO_Coal</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>SWO_Coal</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <SWO_Coke>10</SWO_Coke>
+        </products>
+        <workSkill>Crafting</workSkill>
+        <displayPriority>0</displayPriority>
+    </RecipeDef>
+
+</Defs>

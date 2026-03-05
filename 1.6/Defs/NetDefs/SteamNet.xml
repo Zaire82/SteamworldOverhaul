@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <PipeSystem.PipeNetDef>
+        <defName>SWO_SteamNet</defName>
+        <noStorageAlert>true</noStorageAlert>
+        <alertProofDefs>
+            <li>NutrientPasteDispenser</li>
+        </alertProofDefs>
+        <resource>
+            <name>Steam</name>
+            <unit>kg</unit>
+            <color>(0.9,0.9,0.9)</color>
+            <onlyShowStored>true</onlyShowStored>
+            <offTexPath>Things/Item/Resource/NoSteam</offTexPath>
+        </resource>
+        <pipeDefs>
+            <li>SWO_SteamPipe</li>
+            <li>SWO_UndergroundSteamPipe</li>
+        </pipeDefs>
+        <designator>
+            <deconstructIconPath>Things/Building/Linked/SteamPipe_Deconstruct</deconstructIconPath>
+            <designationCategoryDef>SWO_SteamCategory</designationCategoryDef>
+        </designator>
+        <overlayOptions>
+            <overlayColor>(128, 128, 128)</overlayColor>
+        </overlayOptions>
+		<linkToRefuelables>
+			<li>
+				<thing>SWO_Steam</thing>
+				<ratio>1</ratio>
+			</li>
+		</linkToRefuelables>
+    </PipeSystem.PipeNetDef>
+
+	<ThingDef>
+		<defName>SWO_Steam</defName>
+		<label>steam</label>
+		<description>hot vaporised water</description>
+		<category>Item</category>
+		<thingClass>ThingWithComps</thingClass>
+		<drawerType>MapMeshOnly</drawerType>
+		<selectable>true</selectable>
+		<stackLimit>500</stackLimit>
+		<tickerType>Never</tickerType>
+		<useHitPoints>false</useHitPoints>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<allowedArchonexusCount>0</allowedArchonexusCount>
+		<resourceReadoutPriority>Last</resourceReadoutPriority>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<graphicData>
+			<texPath>Things/Item/Resource/Steam</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0</MarketValue>
+			<Mass>0.01</Mass>
+		</statBases>
+		<thingCategories/>
+		<destroyOnDrop>True</destroyOnDrop>
+		<canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+		<tradeability>None</tradeability>
+	</ThingDef>
+
+    <DesignatorDropdownGroupDef>
+		<defName>SWO_SteamPipes</defName>
+		<label>steam pipes</label>
+	</DesignatorDropdownGroupDef>
+
+    <ThingDef ParentName="BuildingBase">
+		<defName>SWO_SteamPipe</defName>
+		<label>steam pipe</label>
+		<description>Light brass pipes for transferring steam from boilers to storage and buildings.</description>
+		<thingClass>PipeSystem.Building_Pipe</thingClass>
+		<category>Building</category>
+		<tickerType>Rare</tickerType>
+		<designatorDropdown>SWO_SteamPipes</designatorDropdown>
+		<graphicData>
+			<texPath>Things/Building/Linked/SteamPipe_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<linkType>Basic</linkType>
+			<linkFlags>
+				<li>Custom7</li>
+			</linkFlags>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Linked/SteamPipe_MenuIcon</uiIconPath>
+		<uiIconScale>1</uiIconScale>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Linked/SteamPipe_Blueprint_Atlas</texPath>
+			</blueprintGraphicData>
+		</building>
+		<drawerType>MapMeshOnly</drawerType>
+		<altitudeLayer>Conduits</altitudeLayer>
+		<passability>Standable</passability>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
+			<WorkToBuild>35</WorkToBuild>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<drawStyleCategory>Conduits</drawStyleCategory>
+		<costList>
+			<SWO_Brass>2</SWO_Brass>
+		</costList>
+		<comps>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>SWO_SteamNet</pipeNet>
+			</li>
+			<li Class="PipeSystem.CompProperties_SpillWhenDamaged">
+				<spillEachTicks>600</spillEachTicks>
+				<startAtHitPointsPercent>0.333</startAtHitPointsPercent>
+				<amountToDraw>1</amountToDraw>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PipeSystem.PlaceWorker_Pipe</li>
+		</placeWorkers>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>SWO_SteamCategory</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<clearBuildingArea>false</clearBuildingArea>
+		<researchPrerequisites>
+			<li>SteamNetwork</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+    <ThingDef ParentName="BuildingBase">
+		<defName>SWO_UndergroundSteamPipe</defName>
+		<label>hidden steam pipe</label>
+		<description>Hidden brass pipes for transferring steam from boilers to storage and buildings.</description>
+		<thingClass>PipeSystem.Building_Pipe</thingClass>
+		<category>Building</category>
+		<tickerType>Rare</tickerType>
+		<designatorDropdown>SWO_SteamPipes</designatorDropdown>
+		<graphicData>
+			<texPath>UI/CSG/IConduit</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<linkType>Basic</linkType>
+			<linkFlags>
+				<li>Custom7</li>
+			</linkFlags>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Linked/HiddenSteamPipe_MenuIcon</uiIconPath>
+		<uiIconScale>1</uiIconScale>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<isInert>true</isInert>
+			<isEdifice>false</isEdifice>
+			<blueprintGraphicData>
+				<texPath>Things/Building/Linked/SteamPipe_Blueprint_Atlas</texPath>
+			</blueprintGraphicData>
+		</building>
+		<drawerType>MapMeshOnly</drawerType>
+		<altitudeLayer>Conduits</altitudeLayer>
+		<passability>Standable</passability>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<statBases>
+			<MaxHitPoints>40</MaxHitPoints>
+			<WorkToBuild>35</WorkToBuild>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<drawStyleCategory>Conduits</drawStyleCategory>
+		<costList>
+			<SWO_Brass>2</SWO_Brass>
+		</costList>
+		<comps>
+			<li Class="PipeSystem.CompProperties_Resource">
+				<pipeNet>SWO_SteamNet</pipeNet>
+			</li>
+			<li Class="PipeSystem.CompProperties_SpillWhenDamaged">
+				<spillEachTicks>600</spillEachTicks>
+				<startAtHitPointsPercent>0.333</startAtHitPointsPercent>
+				<amountToDraw>1</amountToDraw>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PipeSystem.PlaceWorker_Pipe</li>
+		</placeWorkers>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>SWO_SteamCategory</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<clearBuildingArea>false</clearBuildingArea>
+		<researchPrerequisites>
+			<li>SteamNetwork</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+    <ThingDef ParentName="BuildingBase">
+		<defName>SWO_SteamValve</defName>
+		<label>steam valve</label>
+		<description>Switches steam flow on/off.</description>
+		<thingClass>PipeSystem.Building_PipeValve</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Things/Building/SteamValve</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>Transparent</shaderType>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<building>
+			<ai_chillDestination>false</ai_chillDestination>
+			<allowWireConnection>false</allowWireConnection>
+		</building>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Standable</passability>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<WorkToBuild>200</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<Beauty>-2</Beauty>
+		</statBases>
+		<costList>
+			<SWO_Brass>15</SWO_Brass>
+			<ComponentIndustrial>1</ComponentIndustrial> <!-- Change to Steam Components -->
+		</costList>
+		<comps>
+			<li Class="PipeSystem.CompProperties_PipeValve">
+				<pipeNet>SWO_SteamNet</pipeNet>
+				<alwaysLinkToPipes>true</alwaysLinkToPipes>
+			</li>
+			<li Class="CompProperties_Flickable">
+				<commandTexture>UI/Icons/Gizmos/SteamIcon</commandTexture>
+				<commandLabelKey>SWO_SteamValve</commandLabelKey>
+				<commandDescKey>SWO_SteamValveDesc</commandDescKey>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>false</neverMultiSelect>
+		<tickerType>Normal</tickerType>
+		<designationCategory>SWO_SteamCategory</designationCategory>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites>
+			<li>SteamNetwork</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>SWO_SteamTank</defName>
+        <label>steam tank</label>
+        <description>A large tank that can store steam for laster use. Destroying it releases the steam.</description>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <graphicData>
+            <texPath>Things/Building/SteamTank/SteamTank</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,3)</drawSize>
+            <drawOffset>(0,0,0)</drawOffset>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+            </damageData>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>Impassable</passability>
+        <blockWind>true</blockWind>
+        <castEdgeShadows>true</castEdgeShadows>
+        <fillPercent>1</fillPercent>
+        <statBases>
+            <MaxHitPoints>200</MaxHitPoints>
+            <WorkToBuild>800</WorkToBuild>
+            <Mass>20</Mass>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <size>(2,3)</size>
+        <costList>
+            <SWO_Brass>120</SWO_Brass>
+        </costList>
+        <comps>
+            <li Class="PipeSystem.CompProperties_ResourceStorage">
+                <pipeNet>SWO_SteamNet</pipeNet>
+                <storageCapacity>500</storageCapacity>
+                <barSize>(1, 0.20)</barSize>
+                <margin>0.1</margin>
+                <centerOffset>(0, 0, 0.625)</centerOffset>
+            </li>
+            <li Class="PipeSystem.CompProperties_ExplosiveContent">
+				<explosiveMaxRadius>4</explosiveMaxRadius>
+				<explosiveDamageType>Smoke</explosiveDamageType>
+				<destroyThingOnExplosionSize>2</destroyThingOnExplosionSize>
+				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+				<wickTicks>50~100</wickTicks>
+			</li>
+        </comps>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>        
+		<tickerType>Normal</tickerType>
+        <designationCategory>SWO_SteamCategory</designationCategory>
+        <constructEffect>ConstructMetal</constructEffect>
+        <canOverlapZones>false</canOverlapZones>
+        <researchPrerequisites>
+        <li>SteamNetwork</li>
+        </researchPrerequisites>
+    </ThingDef>
+</Defs>

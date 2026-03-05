@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <WorkGiverDef>
+        <defName>DoBillsBlastFurnace</defName>
+        <label>smelt items</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>80</priorityInType>
+        <fixedBillGiverDefs>
+            <li>BlastFurnace</li>
+        </fixedBillGiverDefs>
+        <verb>refine at</verb>
+        <gerund>refining at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>DoBillsBeehiveOven</defName>
+        <label>cooking items</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>80</priorityInType>
+        <fixedBillGiverDefs>
+            <li>BeehiveOven</li>
+        </fixedBillGiverDefs>
+        <verb>baking at</verb>
+        <gerund>baking at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>
+
+    <WorkGiverDef>
+        <defName>DoBillsSteamMachining</defName>
+        <label>machining items</label>
+        <giverClass>WorkGiver_DoBill</giverClass>
+        <workType>Crafting</workType>
+        <priorityInType>80</priorityInType>
+        <fixedBillGiverDefs>
+            <li>SteamMachiningTable</li>
+        </fixedBillGiverDefs>
+        <verb>machining at</verb>
+        <gerund>machining at</gerund>
+        <requiredCapacities>
+            <li>Manipulation</li>
+        </requiredCapacities>
+        <prioritizeSustains>true</prioritizeSustains>
+    </WorkGiverDef>
+
+</Defs>

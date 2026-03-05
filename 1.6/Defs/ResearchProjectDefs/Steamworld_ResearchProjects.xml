@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ResearchProjectDef>
+        <defName>AirlessHeating</defName>
+        <label>airless heating</label>
+        <description>Construct an oven that can heat materials to high temperatures in the absense of air.</description>
+        <baseCost>800</baseCost>
+        <techLevel>Medieval</techLevel>
+        <tab>SteamworldTab</tab>
+        <researchViewX>1.00</researchViewX>
+        <researchViewY>2.00</researchViewY>
+        <generalRules>
+        <rulesStrings>
+            <li>subject->airless heating</li>
+
+            <li>subject_story->accidentally lit a coal pile on fire</li>
+            <li>subject_story->has experience baking in ovens</li>
+            <li>subject_story->left the cover on a furnace and accidentally starved it of air</li>
+
+            <li>subject_gerund->refined coal to burn hotter</li>
+        </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>BlastFurnace</defName>
+        <label>blast furnace</label>
+        <description>Construct a specialised furnace that reaches the temperatures necessary to smelt certain metals.</description>
+        <baseCost>1000</baseCost>
+        <techLevel>Medieval</techLevel>
+        <prerequisites>
+            <li>AirlessHeating</li>
+        </prerequisites>
+        <tab>SteamworldTab</tab>
+        <researchViewX>2.00</researchViewX>
+        <researchViewY>2.0</researchViewY>
+        <generalRules>
+        <rulesStrings>
+            <li>subject->blast furnace</li>
+
+            <li>subject_story->burned themselves and became facinated with fire</li>
+            <li>subject_story->experimented with enclosing fires to increase heat</li>
+            <li>subject_story->was required to produce huge amounts of alloys for a local noble</li>
+
+            <li>subject_gerund->alloying copper</li>
+        </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>SteamGeneration</defName>
+        <label>steam  generation</label>
+        <description>Burn coal or wood to produce steam for use in powering buildings.</description>
+        <baseCost>1000</baseCost>
+        <techLevel>Medieval</techLevel>    
+        <prerequisites>
+            <li>BlastFurnace</li>
+        </prerequisites>
+        <tab>SteamworldTab</tab>
+        <researchViewX>3.00</researchViewX>
+        <researchViewY>2.0</researchViewY>
+        <generalRules>
+        <rulesStrings>
+            <li>subject->steam generation</li>
+
+            <li>subject_story->boiled water to make soup for dinner</li>
+            <li>subject_story->measured how hot water has to be to boil and recorded it</li>
+            <li>subject_story->saw steam come out of a gyeser and wanted to recreate it themself</li>
+
+            <li>subject_gerund->producing steam for power</li>
+        </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>SteamNetwork</defName>
+        <label>steam  network</label>
+        <description>Set up a network that transfers and stores steam.</description>
+        <baseCost>1000</baseCost>
+        <techLevel>Medieval</techLevel>    
+        <prerequisites>
+            <li>BlastFurnace</li>
+        </prerequisites>
+        <tab>SteamworldTab</tab>
+        <researchViewX>3.00</researchViewX>
+        <researchViewY>2.50</researchViewY>
+        <generalRules>
+        <rulesStrings>
+            <li>subject->steam network</li>
+
+            <li>subject_story->captured steam for later use</li>
+            <li>subject_story->sectretly built pipes to siphon steam illegally on a steamworld</li>
+            <li>subject_story->set fire to a water tower and watched the water boil into steam</li>
+
+            <li>subject_gerund->controlling and storing steam</li>
+        </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>EarlyMachining</defName>
+        <label>early  machining</label>
+        <description>Cut parts for use in clockwork and steam engineering.</description>
+        <baseCost>1000</baseCost>
+        <techLevel>Medieval</techLevel>    
+        <prerequisites>
+            <li>SteamGeneration</li>
+        </prerequisites>
+        <tab>SteamworldTab</tab>
+        <researchViewX>4.00</researchViewX>
+        <researchViewY>1.50</researchViewY>
+        <generalRules>
+        <rulesStrings>
+            <li>subject->early machining</li>
+
+            <li>subject_story->worked as a clockmaker's apprentice</li>
+            <li>subject_story->disassembled a broken steam engine they found</li>
+            <li>subject_story->witnessed a clockwork wonder and became interested in mechanics</li>
+
+            <li>subject_gerund->mechanical component cutting</li>
+        </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>ClockworkLimbs</defName>
+        <label>clockwork limbs</label>
+        <description>Make replacement limbs using clockwork.</description>
+        <baseCost>1500</baseCost>
+        <techLevel>Medieval</techLevel>    
+        <prerequisites>
+            <li>EarlyMachining</li>
+        </prerequisites>
+        <tab>SteamworldTab</tab>
+        <researchViewX>5.00</researchViewX>
+        <researchViewY>1.50</researchViewY>
+        <generalRules>
+        <rulesStrings>
+            <li>subject->clockwork limbs</li>
+
+            <li>subject_story->made machines using clockwork</li>
+            <li>subject_story->new someone who lost their arm and pitied them</li>
+            <li>subject_story->found advanced clockwork automata in a vault</li>
+
+            <li>subject_gerund->clockwork limb replacement</li>
+        </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>ClockworkOrgans</defName>
+        <label>clockwork organs</label>
+        <description>Make replacement organs using clockwork.</description>
+        <baseCost>1500</baseCost>
+        <techLevel>Medieval</techLevel>    
+        <prerequisites>
+            <li>EarlyMachining</li>
+            <li>LeatherTreating</li>
+        </prerequisites>
+        <tab>SteamworldTab</tab>
+        <researchViewX>5.00</researchViewX>
+        <researchViewY>2.50</researchViewY>
+        <generalRules>
+        <rulesStrings>
+            <li>subject->clockwork organs</li>
+
+            <li>subject_story->improvised with materials at hand when performing sugery</li>
+            <li>subject_story->studied cadavers as a local physician's assistant</li>
+            <li>subject_story->lost someone close who could have been saved with a replacement organ</li>
+
+            <li>subject_gerund->clockwork organ replacement</li>
+        </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>LeatherTreating</defName>
+        <label>leather treating</label>
+        <description>Treat leather to make it more durable and sanitary.</description>
+        <baseCost>500</baseCost>
+        <techLevel>Medieval</techLevel>    
+        <prerequisites>
+            <li>ComplexClothing</li>
+        </prerequisites>
+        <tab>SteamworldTab</tab>
+        <researchViewX>4.00</researchViewX>
+        <researchViewY>2.5</researchViewY>
+        <generalRules>
+        <rulesStrings>
+            <li>subject->leather treating</li>
+
+            <li>subject_story->got annoyed at how fast leather deteriorated</li>
+            <li>subject_story->spilled something on their leather boots and realised it didn't wear out as fast as it used to</li>
+            <li>subject_story->learned leather preservation techniques from a book in an abandoned library</li>
+
+            <li>subject_gerund->treating leather</li>
+        </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+</Defs>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>SWO_CopperOre</defName>
+        <label>copper ore</label>
+        <description>Raw copper ore.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/SWO_CopperOre</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <drawSize>1.2</drawSize>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <statBases>
+            <MarketValue>1</MarketValue>
+            <Mass>0.5</Mass>
+        </statBases>
+        <useHitPoints>false</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <thingCategories>
+            <li>Ores</li>
+        </thingCategories>
+        <deepCommonality>4</deepCommonality>
+        <deepCountPerPortion>45</deepCountPerPortion>
+        <deepLumpSizeRange>8~16</deepLumpSizeRange>
+        <burnableByRecipe>false</burnableByRecipe>
+        <allowedArchonexusCount>80</allowedArchonexusCount>
+    </ThingDef>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>SWO_TinOre</defName>
+        <label>tin</label>
+        <description>Raw tin ore.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/SWO_TinOre</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <drawSize>1.2</drawSize>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <statBases>
+            <MarketValue>1</MarketValue>
+            <Mass>0.5</Mass>
+        </statBases>
+        <useHitPoints>false</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <thingCategories>
+            <li>Ores</li>
+        </thingCategories>
+        <deepCommonality>2</deepCommonality>
+        <deepCountPerPortion>45</deepCountPerPortion>
+        <deepLumpSizeRange>3~6</deepLumpSizeRange>
+        <burnableByRecipe>false</burnableByRecipe>
+        <allowedArchonexusCount>80</allowedArchonexusCount>
+    </ThingDef>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>SWO_ZincOre</defName>
+        <label>zinc</label>
+        <description>Raw zinc ore.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/SWO_ZincOre</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <drawSize>1.2</drawSize>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <statBases>
+            <MarketValue>1.3</MarketValue>
+            <Mass>0.5</Mass>
+        </statBases>
+        <useHitPoints>false</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <thingCategories>
+            <li>Ores</li>
+        </thingCategories>
+        <deepCommonality>2</deepCommonality>
+        <deepCountPerPortion>45</deepCountPerPortion>
+        <deepLumpSizeRange>3~6</deepLumpSizeRange>
+        <burnableByRecipe>false</burnableByRecipe>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <allowedArchonexusCount>80</allowedArchonexusCount>
+    </ThingDef>
+
+
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>SWO_Copper</defName>
+        <label>copper</label>
+        <description>A soft red-orange metal with exceptional conductive properties. Useful in building and electronics.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/SWO_Copper</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <statBases>
+            <MarketValue>1.5</MarketValue>
+            <Mass>0.5</Mass>
+            <StuffPower_Armor_Sharp>0.7</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Blunt>0.35</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Heat>0.60</StuffPower_Armor_Heat>
+            <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+            <SharpDamageMultiplier>0.95</SharpDamageMultiplier>
+            <BluntDamageMultiplier>0.95</BluntDamageMultiplier>
+        </statBases>
+        <useHitPoints>false</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <burnableByRecipe>false</burnableByRecipe>
+        <smeltable>true</smeltable>
+        <stuffProps>
+            <categories>
+                <li>Metallic</li>
+            </categories>
+            <appearance>Metal</appearance>
+            <commonality>0.6</commonality>
+            <constructEffect>ConstructMetal</constructEffect>
+            <isAirtight>true</isAirtight>
+            <color>(183,115,51)</color>
+            <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+            <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+            <statFactors>
+                <MaxHitPoints>0.9</MaxHitPoints>
+                <Beauty>1.5</Beauty>
+                <Flammability>0.4</Flammability>
+            </statFactors>
+        </stuffProps>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <allowedArchonexusCount>80</allowedArchonexusCount>
+    </ThingDef>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>SWO_Tin</defName>
+        <label>tin</label>
+        <description>A silver metal with a crystaline structure. It is malleable and useful and can be used to procude bronze alloy.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/SWO_Tin</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <statBases>
+            <MarketValue>1.3</MarketValue>
+            <Mass>0.5</Mass>
+            <StuffPower_Armor_Sharp>0.5</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Blunt>0.2</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Heat>0.60</StuffPower_Armor_Heat>
+            <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+            <SharpDamageMultiplier>0.8</SharpDamageMultiplier>
+            <BluntDamageMultiplier>0.8</BluntDamageMultiplier>
+        </statBases>
+        <useHitPoints>false</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <burnableByRecipe>false</burnableByRecipe>
+        <smeltable>true</smeltable>
+        <stuffProps>
+            <categories>
+                <li>Metallic</li>
+            </categories>
+            <appearance>Metal</appearance>
+            <commonality>0.2</commonality>
+            <constructEffect>ConstructMetal</constructEffect>
+            <isAirtight>true</isAirtight>
+            <color>(219,219,219)</color>
+            <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+            <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+            <statFactors>
+                <MaxHitPoints>0.7</MaxHitPoints>
+                <Beauty>1</Beauty>
+                <Flammability>0.4</Flammability>
+            </statFactors>
+        </stuffProps>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <allowedArchonexusCount>80</allowedArchonexusCount>
+    </ThingDef>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>SWO_Zinc</defName>
+        <label>zinc</label>
+        <description>A bluish-white metal with a low melting point. It is very effective at protecting from corrosion and can be used in brass alloy.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/SWO_Zinc</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <statBases>
+            <MarketValue>1.3</MarketValue>
+            <Mass>0.5</Mass>
+            <StuffPower_Armor_Sharp>0.5</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Blunt>0.2</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Heat>0.60</StuffPower_Armor_Heat>
+            <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+            <SharpDamageMultiplier>0.8</SharpDamageMultiplier>
+            <BluntDamageMultiplier>0.8</BluntDamageMultiplier>
+        </statBases>
+        <useHitPoints>false</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <burnableByRecipe>false</burnableByRecipe>
+        <smeltable>true</smeltable>
+        <stuffProps>
+            <categories>
+                <li>Metallic</li>
+            </categories>
+            <appearance>Metal</appearance>
+            <commonality>0.2</commonality>
+            <constructEffect>ConstructMetal</constructEffect>
+            <isAirtight>true</isAirtight>
+            <color>(227,231,232)</color>
+            <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+            <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+            <statFactors>
+                <MaxHitPoints>0.7</MaxHitPoints>
+                <Beauty>1</Beauty>
+                <Flammability>0.4</Flammability>
+            </statFactors>
+        </stuffProps>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <allowedArchonexusCount>80</allowedArchonexusCount>
+    </ThingDef>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>SWO_Brass</defName>
+        <label>brass</label>
+        <description>A gold-coloured metal alloy of copper and zinc. It is resistant to corrosion and has low friction, making it suitable for mechanical components such as gears, pistons, hinges, and other moving parts.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/SWO_Brass</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <statBases>
+            <MarketValue>1.9</MarketValue>
+            <Mass>0.5</Mass>
+            <StuffPower_Armor_Sharp>0.8</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Blunt>0.4</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Heat>0.60</StuffPower_Armor_Heat>
+            <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+            <SharpDamageMultiplier>0.95</SharpDamageMultiplier>
+            <BluntDamageMultiplier>1</BluntDamageMultiplier>
+        </statBases>
+        <useHitPoints>false</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <smeltable>true</smeltable>
+        <stuffProps>
+            <categories>
+                <li>Metallic</li>
+            </categories>
+            <appearance>Metal</appearance>
+            <commonality>0.8</commonality>
+            <constructEffect>ConstructMetal</constructEffect>
+            <isAirtight>true</isAirtight>
+            <color>(199, 153, 46)</color>
+            <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+            <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+            <statFactors>
+                <MaxHitPoints>1</MaxHitPoints>
+                <Beauty>2</Beauty>
+                <Flammability>0.4</Flammability>
+            </statFactors>
+        </stuffProps>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <allowedArchonexusCount>80</allowedArchonexusCount>
+    </ThingDef>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>SWO_Bronze</defName>
+        <label>bronze</label>
+        <description>A yellow metal alloy of copper and tin. It is one of the oldest alloys used by humans due to its easy production. It is tough and durable.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/SWO_Bronze</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <statBases>
+            <MarketValue>1.9</MarketValue>
+            <Mass>0.5</Mass>
+            <StuffPower_Armor_Sharp>0.85</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Blunt>0.35</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Heat>0.60</StuffPower_Armor_Heat>
+            <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+            <SharpDamageMultiplier>1</SharpDamageMultiplier>
+            <BluntDamageMultiplier>0.95</BluntDamageMultiplier>
+        </statBases>
+        <useHitPoints>false</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <smeltable>true</smeltable>
+        <stuffProps>
+            <categories>
+                <li>Metallic</li>
+            </categories>
+            <appearance>Metal</appearance>
+            <commonality>0.8</commonality>
+            <constructEffect>ConstructMetal</constructEffect>
+            <isAirtight>true</isAirtight>
+            <color>(166, 91, 38)</color>
+            <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+            <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+            <statFactors>
+                <MaxHitPoints>1</MaxHitPoints>
+                <Beauty>2</Beauty>
+                <Flammability>0.4</Flammability>
+            </statFactors>
+        </stuffProps>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <allowedArchonexusCount>80</allowedArchonexusCount>
+    </ThingDef>
+
+</Defs>

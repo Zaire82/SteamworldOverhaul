@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Clockwork Part bases (Medieval tech) -->
+
+    <HediffDef Name="ClockworkBodyPartBase" ParentName="AddedBodyPartBase" Abstract="True">
+        <defaultLabelColor>(181, 141, 60)</defaultLabelColor>
+    </HediffDef>
+
+    <ThingDef Name="BodyPartClockworkBase" ParentName="BodyPartBase" Abstract="True">
+        <techLevel>Medieval</techLevel>
+        <thingCategories>
+            <li>BodyPartsProsthetic</li>
+        </thingCategories>
+        <graphicData>
+            <texPath>Things/Item/Manufactured/LeatherChest</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1</drawSize>
+            <color>(255,255,255)</color>
+        </graphicData>
+        <statBases>
+            <WorkToMake>12000</WorkToMake>
+        </statBases>
+        <recipeMaker>
+            <displayPriority>600</displayPriority>
+        </recipeMaker>
+    </ThingDef>
+
+    <ThingDef Name="BodyPartClockworkLimbMakeableBase" ParentName="BodyPartClockworkBase" Abstract="True">
+        <recipeMaker>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill>
+        <effectWorking>Smith</effectWorking>
+        <soundWorking>Recipe_Smith</soundWorking>
+        <recipeUsers>
+            <li>SteamMachiningTable</li>
+        </recipeUsers>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <researchPrerequisite>ClockworkLimbs</researchPrerequisite>
+        </recipeMaker>
+    </ThingDef>
+
+    <ThingDef Name="BodyPartClockworkOrganMakeableBase" ParentName="BodyPartClockworkBase" Abstract="True">
+        <recipeMaker>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill>
+        <effectWorking>Smith</effectWorking>
+        <soundWorking>Recipe_Smith</soundWorking>
+        <recipeUsers>
+            <li>SteamMachiningTable</li>
+        </recipeUsers>
+            <skillRequirements>
+                <Crafting>6</Crafting>
+            </skillRequirements>
+            <unfinishedThingDef>UnfinishedHealthItemProsthetic</unfinishedThingDef>
+            <researchPrerequisite>ClockworkOrgans</researchPrerequisite>
+        </recipeMaker>
+    </ThingDef>
+
+    <RecipeDef Name="SurgeryInstallBodyPartClockworkBase" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="True">
+        <skillRequirements>
+            <Medicine>4</Medicine>
+        </skillRequirements>
+    </RecipeDef>
+
+  <!-- Clockwork Arm -->
+
+  <HediffDef ParentName="ClockworkBodyPartBase">
+    <defName>SWO_ClockworkArm</defName>
+    <label>clockwork arm</label>
+    <labelNoun>a clockwork arm</labelNoun>
+    <description>An installed clockwork arm. While it lacks a neural interface, its complex arrangement of clockwork mechanisms allows it to mimic natural movement quite convincingly. Still, it is inferior to a real arm.</description>
+    <descriptionHyperlinks><ThingDef>SWO_ClockworkArm</ThingDef></descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>8.2</power> <!-- Same as natural fist -->
+            <cooldownTime>2</cooldownTime>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>SWO_ClockworkArm</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.70</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartClockworkLimbMakeableBase">
+    <defName>SWO_ClockworkArm</defName>
+    <label>clockwork arm</label>
+    <description>A clockwork arm prosthesis. While it lacks a neural interface, its complex arrangement of clockwork mechanisms allows it to mimic natural movement quite convincingly. Still, it is inferior to a real arm.</description>
+    <descriptionHyperlinks><RecipeDef>Install_SWO_ClockworkArm</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <SWO_Gear>10</SWO_Gear>
+      <SWO_Spring>5</SWO_Spring>
+      <SWO_Brass>20</SWO_Brass>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartClockworkBase">
+    <defName>Install_SWO_ClockworkArm</defName>
+    <label>install clockwork arm</label>
+    <description>Install a clockwork arm.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SWO_ClockworkArm</ThingDef>
+      <HediffDef>SWO_ClockworkArm</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing clockwork arm.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SWO_ClockworkArm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SWO_ClockworkArm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SWO_ClockworkArm</addsHediff>
+  </RecipeDef>
+
+    <!-- Clockwork Leg -->
+
+  <HediffDef ParentName="ClockworkBodyPartBase">
+    <defName>SWO_ClockworkLeg</defName>
+    <label>clockwork leg</label>
+    <labelNoun>a clockwork leg</labelNoun>
+    <description>An installed clockwork leg. While it lacks a neural interface, its complex arrangement of clockwork mechanisms allows it to mimic natural movement quite convincingly. Still, it is inferior to a real leg.</description>
+    <descriptionHyperlinks><ThingDef>SWO_ClockworkLeg</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>SWO_ClockworkLeg</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.85</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartClockworkLimbMakeableBase">
+    <defName>SWO_ClockworkLeg</defName>
+    <label>clockwork leg</label>
+    <description>A clockwork leg prosthesis. While it lacks a neural interface, its complex arrangement of clockwork mechanisms allows it to mimic natural movement quite convincingly. Still, it is inferior to a real leg.</description>
+    <descriptionHyperlinks><RecipeDef>Install_SWO_ClockworkLeg</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <SWO_Gear>5</SWO_Gear>
+      <SWO_Spring>5</SWO_Spring>
+      <SWO_Bronze>50</SWO_Bronze>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartClockworkBase">
+    <defName>Install_SWO_ClockworkLeg</defName>
+    <label>install clockwork leg</label>
+    <description>Install a clockwork leg.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SWO_ClockworkLeg</ThingDef>
+      <HediffDef>SWO_ClockworkLeg</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing clockwork leg.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SWO_ClockworkLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SWO_ClockworkLeg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Leg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SWO_ClockworkLeg</addsHediff>
+  </RecipeDef>
+
+    <!-- Clockwork Hand -->
+
+  <HediffDef ParentName="ClockworkBodyPartBase">
+    <defName>SWO_ClockworkHand</defName>
+    <label>clockwork hand</label>
+    <labelNoun>a clockwork hand</labelNoun>
+    <description>An installed clockwork hand. While it lacks a neural interface, its complex arrangement of clockwork mechanisms allows it to mimic natural movement quite convincingly. Still, it is inferior to a real hand.</description>
+    <descriptionHyperlinks><ThingDef>SWO_ClockworkHand</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>SWO_ClockworkHand</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.75</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartClockworkLimbMakeableBase">
+    <defName>SWO_ClockworkHand</defName>
+    <label>clockwork hand</label>
+    <description>A clockwork hand prosthesis. While it lacks a neural interface, its complex arrangement of clockwork mechanisms allows it to mimic natural movement quite convincingly. Still, it is inferior to a real hand.</description>
+    <descriptionHyperlinks><RecipeDef>Install_SWO_ClockworkHand</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <SWO_Gear>5</SWO_Gear>
+      <SWO_Spring>1</SWO_Spring>
+      <SWO_Brass>10</SWO_Brass>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartClockworkBase">
+    <defName>Install_SWO_ClockworkHand</defName>
+    <label>install clockwork hand</label>
+    <description>Install a clockwork hand.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SWO_ClockworkHand</ThingDef>
+      <HediffDef>SWO_ClockworkHand</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing clockwork hand.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SWO_ClockworkHand</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SWO_ClockworkHand</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hand</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SWO_ClockworkHand</addsHediff>
+  </RecipeDef>
+
+    <!-- Clockwork Foot -->
+
+  <HediffDef ParentName="ClockworkBodyPartBase">
+    <defName>SWO_ClockworkFoot</defName>
+    <label>clockwork foot</label>
+    <labelNoun>a clockwork foot</labelNoun>
+    <description>An installed clockwork foot. While it lacks a neural interface, its complex arrangement of clockwork mechanisms allows it to mimic natural movement quite convincingly. Still, it is inferior to a real foot.</description>
+    <descriptionHyperlinks><ThingDef>SWO_ClockworkFoot</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>SWO_ClockworkFoot</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.85</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartClockworkLimbMakeableBase">
+    <defName>SWO_ClockworkFoot</defName>
+    <label>clockwork foot</label>
+    <description>A clockwork foot prosthesis. While it lacks a neural interface, its complex arrangement of clockwork mechanisms allows it to mimic natural movement quite convincingly. Still, it is inferior to a real foot.</description>
+    <descriptionHyperlinks><RecipeDef>Install_SWO_ClockworkFoot</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <SWO_Gear>1</SWO_Gear>
+      <SWO_Spring>5</SWO_Spring>
+      <SWO_Bronze>10</SWO_Bronze>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartClockworkBase">
+    <defName>Install_SWO_ClockworkFoot</defName>
+    <label>install clockwork foot</label>
+    <description>Install a clockwork foot.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SWO_ClockworkFoot</ThingDef>
+      <HediffDef>SWO_ClockworkFoot</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing clockwork foot.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SWO_ClockworkFoot</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SWO_ClockworkFoot</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Foot</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SWO_ClockworkFoot</addsHediff>
+  </RecipeDef>
+
+    <!-- Clockwork Lung -->
+
+  <HediffDef ParentName="ClockworkBodyPartBase">
+    <defName>SWO_LeatherLung</defName>
+    <label>leather lung</label>
+    <labelNoun>a leather lung</labelNoun>
+    <description>An installed leather lung. Through crude mechanisms, it immitates the function of a real lung and oxygenates blood.</description>
+    <descriptionHyperlinks><ThingDef>SWO_LeatherLung</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>SWO_LeatherLung</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.5</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartClockworkOrganMakeableBase">
+    <defName>SWO_LeatherLung</defName>
+    <label>leather lung</label>
+    <description>An installed leather lung. Through crude mechanisms, it immitates the function of a real lung and oxygenates blood.</description>
+    <descriptionHyperlinks><RecipeDef>Install_SWO_LeatherLung</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <SWO_Spring>2</SWO_Spring>
+      <SWO_Brass>10</SWO_Brass>
+      <SWO_TreatedLeather>50</SWO_TreatedLeather>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartClockworkBase">
+    <defName>Install_SWO_LeatherLung</defName>
+    <label>install leather lung</label>
+    <description>Install a leather lung.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SWO_LeatherLung</ThingDef>
+      <HediffDef>SWO_LeatherLung</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing leather lung.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SWO_LeatherLung</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SWO_LeatherLung</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Lung</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SWO_LeatherLung</addsHediff>
+  </RecipeDef>
+
+    <!-- Clockwork Heart Pacer -->
+
+  <HediffDef ParentName="ClockworkBodyPartBase">
+    <defName>SWO_ClockworkHeartPacer</defName>
+    <label>clockwork heart pacer</label>
+    <labelNoun>a clockwork heart pacer</labelNoun>
+    <description>An installed clockwork heart pacer. Through crude mechanisms, it replicates the functions of a natural heart. \nThis is temporary measure for preserving life, replacing with a donor heart is recommended.</description>
+    <descriptionHyperlinks><ThingDef>SWO_ClockworkHeartPacer</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>SWO_ClockworkHeartPacer</spawnThingOnRemoved>
+    <addedPartProps>
+      <partEfficiency>0.5</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartClockworkOrganMakeableBase">
+    <defName>SWO_ClockworkHeartPacer</defName>
+    <label>clockwork heart pacer</label>
+    <description>An installed clockwork heart pacer. Through crude mechanisms, it replicates the functions of a natural heart. \nThis is temporary measure for preserving life, replacing with a donor heart is recommended.</description>
+    <descriptionHyperlinks><RecipeDef>Install_SWO_ClockworkHeartPacer</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <SWO_Gear>5</SWO_Gear>
+      <SWO_Spring>3</SWO_Spring>
+      <SWO_Brass>15</SWO_Brass>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartClockworkBase">
+    <defName>Install_SWO_ClockworkHeartPacer</defName>
+    <label>install clockwork heart pacer</label>
+    <description>Install a clockwork heart pacer.</description>
+    <descriptionHyperlinks>
+      <ThingDef>SWO_ClockworkHeartPacer</ThingDef>
+      <HediffDef>SWO_ClockworkHeartPacer</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing clockwork heart pacer.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SWO_ClockworkHeartPacer</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SWO_ClockworkHeartPacer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Heart</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SWO_ClockworkHeartPacer</addsHediff>
+  </RecipeDef>
+
+</Defs>

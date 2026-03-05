@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BenchBase">
+        <defName>BlastFurnace</defName>
+        <label>blast furnace</label>
+        <description>A specialised furnace that reaches extreme temperatures and produces metal alloys.\n\nMust be refuelled with coke.</description>
+        <thingClass>Building_WorkTable</thingClass>
+        <graphicData>
+            <texPath>Things/Building/AlloyFurnace/AlloyFurnace</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(4,4)</drawSize>
+            <drawOffset>(0,0,0.5)</drawOffset>
+        </graphicData>
+        <castEdgeShadows>true</castEdgeShadows>
+        <staticSunShadowHeight>0.40</staticSunShadowHeight>
+        <stuffCategories>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>200</costStuffCount>
+        <costList>
+            <SWO_Copper>50</SWO_Copper>
+        </costList>
+        <altitudeLayer>Building</altitudeLayer>
+        <fillPercent>0.5</fillPercent>
+        <useHitPoints>True</useHitPoints>
+        <statBases>
+            <WorkToBuild>4000</WorkToBuild>
+            <MaxHitPoints>400</MaxHitPoints>
+            <Flammability>0.1</Flammability>
+            <Cleanliness>-10</Cleanliness>
+        </statBases>
+        <size>(3,3)</size>        
+        <designationCategory>SWO_SteamCategory</designationCategory>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
+        <hasInteractionCell>True</hasInteractionCell>
+        <interactionCellOffset>(0,0,-2)</interactionCellOffset>
+        <surfaceType>Item</surfaceType>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+        <recipes>
+            <li>RefineCopper</li>
+            <li>RefineZinc</li>
+            <li>RefineTin</li>
+            <li>CastBrass</li>
+            <li>CastBronze</li>
+        </recipes>
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+        <comps>
+            <li Class="CompProperties_Refuelable">
+                <fuelConsumptionRate>100.0</fuelConsumptionRate>
+                <fuelCapacity>100.0</fuelCapacity>
+                <fuelFilter>
+                    <thingDefs>
+                        <li>SWO_Coke</li>
+                    </thingDefs>
+                </fuelFilter>
+                <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+            </li>
+            <li Class="CompProperties_Glower">
+				<glowRadius>5</glowRadius>
+				<glowColor>(252,187,113,0)</glowColor>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>20</heatPerSecond>
+				<heatPushMaxTemperature>25</heatPushMaxTemperature>
+			</li>
+        </comps>
+        <building>
+            <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+            <heatPerTickWhileWorking>0.32</heatPerTickWhileWorking>
+            <workTableRoomRole>Workshop</workTableRoomRole>
+            <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+        </building>
+        <placeWorkers>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+            <li>PlaceWorker_ReportWorkSpeedPenalties</li>
+        </placeWorkers>
+        <researchPrerequisites>
+            <li>BlastFurnace</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <ThingDef ParentName="BenchBase">
+        <defName>BeehiveOven</defName>
+        <label>beehive oven</label>
+        <description>An oven designed to capture heat and limit oxygen.\n\nMust be refuelled with wood or coal.</description>
+        <thingClass>Building_WorkTable</thingClass>
+        <graphicData>
+            <texPath>Things/Building/BeehiveOven/BeehiveOven</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(4,4)</drawSize>
+            <drawOffset>(0,0,0.5)</drawOffset>
+        </graphicData>
+        <castEdgeShadows>false</castEdgeShadows>
+        <staticSunShadowHeight>0</staticSunShadowHeight>
+        <stuffCategories>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>150</costStuffCount>
+        <altitudeLayer>Building</altitudeLayer>
+        <fillPercent>0.5</fillPercent>
+        <useHitPoints>True</useHitPoints>
+        <statBases>
+            <WorkToBuild>3000</WorkToBuild>
+            <MaxHitPoints>300</MaxHitPoints>
+            <Flammability>0</Flammability>
+            <Cleanliness>-10</Cleanliness>
+        </statBases>
+        <size>(3,3)</size>        
+        <designationCategory>SWO_SteamCategory</designationCategory>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
+        <hasInteractionCell>True</hasInteractionCell>
+        <interactionCellOffset>(0,0,-2)</interactionCellOffset>
+        <surfaceType>Item</surfaceType>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+        <recipes>
+            <li>Make_Coke</li>
+        </recipes>
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+        <comps>
+            <li Class="CompProperties_Refuelable">
+                <fuelConsumptionRate>100.0</fuelConsumptionRate>
+                <fuelCapacity>100.0</fuelCapacity>
+                <fuelFilter>
+                    <thingDefs>
+                        <li>WoodLog</li>
+                        <li>SWO_Coal</li>
+                    </thingDefs>
+                </fuelFilter>
+                <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+            </li>
+            <li Class="CompProperties_Glower">
+				<glowRadius>5</glowRadius>
+				<glowColor>(252,187,113,0)</glowColor>
+			</li>
+			<li Class="CompProperties_HeatPusher">
+				<compClass>CompHeatPusherPowered</compClass>
+				<heatPerSecond>20</heatPerSecond>
+				<heatPushMaxTemperature>25</heatPushMaxTemperature>
+			</li>
+        </comps>
+        <building>
+            <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+            <heatPerTickWhileWorking>0.32</heatPerTickWhileWorking>
+            <workTableRoomRole>Workshop</workTableRoomRole>
+            <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+        </building>
+        <placeWorkers>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+            <li>PlaceWorker_ReportWorkSpeedPenalties</li>
+        </placeWorkers>
+        <researchPrerequisites>
+            <li>AirlessHeating</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <ThingDef ParentName="BenchBase">
+        <defName>SteamMachiningTable</defName>
+        <label>steam machining table</label>
+        <description>A machining table powered by steam for cutting gears and other machincal parts.\n\nRequires a connection to the steam network.</description>
+        <thingClass>Building_WorkTable</thingClass>
+        <graphicData>
+            <texPath>Things/Building/SteamMachiningTable/SteamMachiningTable</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3,1.5)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <castEdgeShadows>true</castEdgeShadows>
+        <staticSunShadowHeight>0.20</staticSunShadowHeight>
+        <costList>
+            <SWO_Brass>100</SWO_Brass>
+            <SWO_Bronze>50</SWO_Bronze>
+        </costList>
+        <altitudeLayer>Building</altitudeLayer>
+        <fillPercent>0.5</fillPercent>
+        <useHitPoints>True</useHitPoints>
+        <statBases>
+            <WorkToBuild>3000</WorkToBuild>
+            <MaxHitPoints>200</MaxHitPoints>
+            <Flammability>1.0</Flammability>
+            <Cleanliness>-2</Cleanliness>
+        </statBases>
+        <size>(3,1)</size>        
+        <designationCategory>SWO_SteamCategory</designationCategory>
+        <uiOrder>3000</uiOrder>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
+        <hasInteractionCell>True</hasInteractionCell>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <surfaceType>Item</surfaceType>
+        <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+        <recipes>
+            <li>ButcherCorpseMechanoid</li> <!-- add all recipes once added -->
+            <li>Make_Gear</li>
+            <li>Make_Spring</li>
+        </recipes>
+        <inspectorTabs>
+            <li>ITab_Bills</li>
+        </inspectorTabs>
+        <comps>
+            <li Class="PipeSystem.CompProperties_ResourceTrader">
+                <compClass>PipeSystem.CompResourceTrader</compClass>
+                <pipeNet>SWO_SteamNet</pipeNet>
+                <consumptionPerTick>3</consumptionPerTick>
+                <idleConsumptionPerTick>0.25</idleConsumptionPerTick>
+            </li>
+            <li Class="CompProperties_Glower">
+				<glowRadius>5</glowRadius>
+				<glowColor>(252,187,113,0)</glowColor>
+			</li>
+        </comps>
+        <building>
+            <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+            <workTableRoomRole>Workshop</workTableRoomRole>
+            <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+        </building>
+        <placeWorkers>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+            <li>PlaceWorker_ReportWorkSpeedPenalties</li>
+        </placeWorkers>
+        <researchPrerequisites>
+            <li>EarlyMachining</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+</Defs>

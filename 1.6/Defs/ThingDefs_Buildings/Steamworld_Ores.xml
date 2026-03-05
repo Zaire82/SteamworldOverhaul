@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--============================ Resource rocks ===============================-->
+
+    <ThingDef ParentName="RockBase">
+        <defName>SWO_MineableCopper</defName>
+        <label>copper ore</label>
+        <description>Rock containing unrefined copper ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(183,115,51)</color>
+            <colorTwo>(120,201,223)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>SWO_CopperOre</mineableThing>
+            <mineableYield>40</mineableYield>
+            <mineableScatterCommonality>1</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>10~20</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>SWO_MineableTin</defName>
+        <label>tin ore</label>
+        <description>Rock containing unrefined tin ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(219,219,219)</color>
+            <colorTwo>(153,139,122)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>SWO_TinOre</mineableThing>
+            <mineableYield>40</mineableYield>
+            <mineableScatterCommonality>0.5</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>5~10</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>SWO_MineableZinc</defName>
+        <label>zinc ore</label>
+        <description>Rock containing unrefined zinc ore.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(227,231,232)</color>
+            <colorTwo>(171,168,164)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>SWO_ZincOre</mineableThing>
+            <mineableYield>40</mineableYield>
+            <mineableScatterCommonality>0.5</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>5~10</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RockBase">
+        <defName>SWO_MineableCoal</defName>
+        <label>coal</label>
+        <description>Rock containing coal.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(54,53,51)</color>
+            <colorTwo>(38,38,37)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>1000</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>SWO_Coal</mineableThing>
+            <mineableYield>40</mineableYield>
+            <mineableScatterCommonality>1</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>10~20</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+</Defs>
