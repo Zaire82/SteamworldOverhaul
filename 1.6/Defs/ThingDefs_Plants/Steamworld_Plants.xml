@@ -25,7 +25,7 @@
 			<harvestTag>Standard</harvestTag>
 			<harvestedThingDef>SWO_Starbloom</harvestedThingDef>
 			<immatureGraphicPath>Things/Plants/Starbloom/Starbloom_Immature</immatureGraphicPath>
-			<harvestYield>3</harvestYield>
+			<harvestYield>3~4</harvestYield>
 			<sowTags>
 				<li>Ground</li>
 				<li>Decorative</li>
