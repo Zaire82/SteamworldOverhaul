@@ -247,6 +247,7 @@
 		<graphicData>
 			<texPath>Things/Building/ChemistryTable/ChemistryTable</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
 			<drawSize>(3,1)</drawSize>
 			<drawOffset>(0,0,-0.125)</drawOffset>
 			<damageData>
