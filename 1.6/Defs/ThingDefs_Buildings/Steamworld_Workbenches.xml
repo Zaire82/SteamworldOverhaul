@@ -261,6 +261,7 @@
 		<staticSunShadowHeight>0.20</staticSunShadowHeight>
 		<stuffCategories>
 			<li>Woody</li>
+			<li>Metallic</li>
 		</stuffCategories>
 		<costStuffCount>75</costStuffCount>
 		<costList>
@@ -285,7 +286,7 @@
 		<surfaceType>Item</surfaceType>
 		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
 		<recipes>
-			<li>ButcherCorpseMechanoid</li> <!-- add all recipes once added -->
+			<li>Make_GlowingVial</li> <!-- add all recipes once added -->
 		</recipes>
 		<inspectorTabs>
 			<li>ITab_Bills</li>

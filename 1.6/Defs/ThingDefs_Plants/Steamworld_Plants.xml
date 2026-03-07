@@ -13,7 +13,7 @@
 		</statBases>
 		<graphicData>
 			<texPath>Things/Plants/Starbloom/Starbloom</texPath>
-			<graphicClass>Graphic_Random</graphicClass>
+			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
 		<altitudeLayer>Item</altitudeLayer>
