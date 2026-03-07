@@ -7,7 +7,7 @@
 		<description>A transluscent luminous liquid produced from starblooms. Can be used at the chemistry table.</description>
 		<graphicData>
 			<texPath>Things/Item/Manufactured/SWO_GlowVial/SWO_GlowVial</texPath>
-			<graphicClass>Graphic_StackCount</graphicClass>
+			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>ChunkRock_Drop</soundInteract>
 		<soundDrop>ChunkRock_Drop</soundDrop>
@@ -17,6 +17,7 @@
 			<Mass>0.4</Mass>
 			<Flammability>1.5</Flammability>
 		</statBases>
+		<stackLimit>10</stackLimit>
 		<useHitPoints>true</useHitPoints>
 		<healthAffectsPrice>false</healthAffectsPrice>
 		<thingCategories>
