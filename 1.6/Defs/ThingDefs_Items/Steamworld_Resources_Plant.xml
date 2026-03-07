@@ -6,7 +6,7 @@
 		<label>starbloom</label>
 		<description>Luminescent flowers that resembles the shape of a star. It can be used to produce certain chemicals.</description>
 		<graphicData>
-			<texPath>Things/Item/Plant/Starbloom</texPath>
+			<texPath>Things/Item/Resource/Plant/Starbloom_harvest</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>1</drawSize>
 		</graphicData>
