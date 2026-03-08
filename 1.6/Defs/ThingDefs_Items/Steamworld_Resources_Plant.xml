@@ -14,13 +14,12 @@
 		<soundDrop>Standard_Drop</soundDrop>
 		<stackLimit>50</stackLimit>
 		<statBases>
-			<MaxHitPoints>50</MaxHitPoints>
-			<MarketValue>16</MarketValue>
-			<Mass>0.6</Mass>
-			<Flammability>0.6</Flammability>
-			<DeteriorationRate>1.0</DeteriorationRate>
+			<MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>2.3</MarketValue>
+			<Mass>0.05</Mass>
+			<Flammability>1</Flammability>
+			<DeteriorationRate>2.0</DeteriorationRate>
 		</statBases>
-		<intricate>true</intricate>
 		<healthAffectsPrice>false</healthAffectsPrice>
 		<thingCategories>
 			<li>Manufactured</li>

@@ -8,7 +8,7 @@
 		<jobString>Grinding starblooms.</jobString>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
-		<soundWorking>Recipe_Cooking</soundWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
 		<workAmount>1500</workAmount>
 		<ingredients>
 			<li>
@@ -28,7 +28,7 @@
 		<products>
 			<SWO_GlowVial>1</SWO_GlowVial>
 		</products>
-		<researchPrerequisite>EarlyMachining</researchPrerequisite>
+		<researchPrerequisite>BasicChemistry</researchPrerequisite>
 		<skillRequirements>
 			<Crafting>6</Crafting>
 		</skillRequirements>
