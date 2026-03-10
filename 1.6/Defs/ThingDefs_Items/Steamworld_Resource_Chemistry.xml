@@ -25,5 +25,30 @@
 		</thingCategories>
 		<allowedArchonexusCount>100</allowedArchonexusCount>
 	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>SWO_SoulVial</defName>
+		<label>soul vial</label>
+		<description>A transluscent liquid produced from soul fungus. Can be used at the chemistry table.</description>
+		<graphicData>
+			<texPath>Things/Item/Manufactured/SWO_SoulVial/SWO_SoulVial</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>ChunkRock_Drop</soundInteract>
+		<soundDrop>ChunkRock_Drop</soundDrop>
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+			<MarketValue>135</MarketValue>
+			<Mass>0.5</Mass>
+			<Flammability>1</Flammability>
+		</statBases>
+		<stackLimit>10</stackLimit>
+		<useHitPoints>true</useHitPoints>
+		<healthAffectsPrice>true</healthAffectsPrice>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<allowedArchonexusCount>100</allowedArchonexusCount>
+	</ThingDef>
 	
 </Defs>

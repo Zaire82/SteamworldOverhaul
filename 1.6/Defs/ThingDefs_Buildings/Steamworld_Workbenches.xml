@@ -286,7 +286,8 @@
 		<surfaceType>Item</surfaceType>
 		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
 		<recipes>
-			<li>Make_GlowingVial</li> <!-- add all recipes once added -->
+			<li>Make_GlowVial</li> <!-- add all recipes once added -->
+			<li>Make_SoulVial</li>
 		</recipes>
 		<inspectorTabs>
 			<li>ITab_Bills</li>
