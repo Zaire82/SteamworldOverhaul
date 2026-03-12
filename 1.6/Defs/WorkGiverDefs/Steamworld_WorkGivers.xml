@@ -20,14 +20,14 @@
 
     <WorkGiverDef>
         <defName>DoBillsBeehiveOven</defName>
-        <label>cooking items</label>
+        <label>cook items</label>
         <giverClass>WorkGiver_DoBill</giverClass>
         <workType>Crafting</workType>
         <priorityInType>80</priorityInType>
         <fixedBillGiverDefs>
             <li>BeehiveOven</li>
         </fixedBillGiverDefs>
-        <verb>baking at</verb>
+        <verb>bake at</verb>
         <gerund>baking at</gerund>
         <requiredCapacities>
             <li>Manipulation</li>
@@ -37,19 +37,36 @@
 
     <WorkGiverDef>
         <defName>DoBillsSteamMachining</defName>
-        <label>machining items</label>
+        <label>machine items</label>
         <giverClass>WorkGiver_DoBill</giverClass>
         <workType>Crafting</workType>
         <priorityInType>80</priorityInType>
         <fixedBillGiverDefs>
             <li>SteamMachiningTable</li>
         </fixedBillGiverDefs>
-        <verb>machining at</verb>
+        <verb>machine at</verb>
         <gerund>machining at</gerund>
         <requiredCapacities>
             <li>Manipulation</li>
         </requiredCapacities>
         <prioritizeSustains>true</prioritizeSustains>
     </WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>DoBillsChemistry</defName>
+		<label>process chemicals</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Crafting</workType>
+		<priorityInType>80</priorityInType>
+		<fixedBillGiverDefs>
+			<li>ChemistryTable</li>
+		</fixedBillGiverDefs>
+		<verb>process at</verb>
+		<gerund>processing at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
 
 </Defs>

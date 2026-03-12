@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<RecipeDef>
+		<defName>Make_GlowVial</defName>
+		<label>make glow vial</label>
+		<description>Grind and dissolve starblooms into a useful glowing liquid. Used to produce certain drugs.</description>
+		<jobString>Grinding starblooms.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<workAmount>1500</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SWO_Starbloom</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SWO_Starbloom</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<SWO_GlowVial>1</SWO_GlowVial>
+		</products>
+		<researchPrerequisite>BasicChemistry</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>0</displayPriority>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>Make_SoulVial</defName>
+		<label>make soul vial</label>
+		<description>Grind and dissolve soul fungus into a useful soul-enhancing liquid. Used to produce certain drugs.</description>
+		<jobString>Grinding soul fungus.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<workAmount>1500</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SWO_SoulFungus</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SWO_SoulFungus</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<SWO_SoulVial>1</SWO_SoulVial>
+		</products>
+		<researchPrerequisite>BasicChemistry</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>0</displayPriority>
+	</RecipeDef>
+	
+</Defs>

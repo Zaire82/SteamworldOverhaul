@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<HediffDef>
+		<defName>AeraticDecay</defName>
+		<label>aeratic decay</label>
+		<description>The body's response to crude and unnatural implants being introduced into it. This condition causes inflammation, pain, reduced bone density, and impeded mobility.\nIf left untreated, it results in death.\n\nIt can be temporarily mitigated with Aeratus Tonic.</description>
+		<descriptionHyperlinks>
+			<ThingDef>AeratusTonic</ThingDef>
+		</descriptionHyperlinks>
+		<defaultLabelColor>(161, 84, 53)</defaultLabelColor>
+		<minSeverity>0.001</minSeverity>
+		<maxSeverity>1</maxSeverity>
+		<lethalSeverity>1</lethalSeverity>
+		<makesSickThought>true</makesSickThought>
+		<stages>
+			<li>
+				<label>negligible</label>
+				<painOffset>0.05</painOffset>
+			</li>
+			<li>
+				<minSeverity>0.1</minSeverity>
+				<label>minor</label>
+				<painOffset>0.1</painOffset>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.4</minSeverity>
+				<label>major</label>
+				<painOffset>0.25</painOffset>
+				<statFactors>
+					<IncomingDamageFactor>1.1</IncomingDamageFactor>
+				</statFactors>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.3</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.3</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.65</minSeverity>
+				<label>extreme</label>
+				<painOffset>0.4</painOffset>
+				<statFactors>
+					<IncomingDamageFactor>1.2</IncomingDamageFactor>
+				</statFactors>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.5</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.5</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.35</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.85</minSeverity>
+				<label>lethal</label>
+				<painOffset>0.4</painOffset>
+				<statFactors>
+					<IncomingDamageFactor>1.3</IncomingDamageFactor>
+				</statFactors>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-1</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-1</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.40</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>TreatAeraticDecay</defName>
+		<label>treat aeratic decay</label>
+		<description>Treats present symptoms of aeratic decay.\n\nDoes not cure it.</description>
+		<workerClass>Recipe_RemoveHediff</workerClass>
+		<jobString>treating aeratic decay.</jobString>
+		<removesHediff>AeraticDecay</removesHediff>
+		<successfullyRemovedHediffMessage>{0} has treated {1}'s aeratic decay.</successfullyRemovedHediffMessage>
+		<workAmount>1500</workAmount>
+		<hideBodyPartNames>true</hideBodyPartNames>
+		<targetsBodyPart>false</targetsBodyPart>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<skillRequirements>
+			<Medicine>5</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	
+</Defs>

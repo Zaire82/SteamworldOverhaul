@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="PlantBase">
+		<defName>Plant_Starbloom</defName>
+		<label>star bloom</label>
+		<description>A plant with luminescent star-shaped flowers. They are very beautiful and can be used to produce certain chemicals.</description>
+		<statBases>
+			<MaxHitPoints>25</MaxHitPoints>
+			<Beauty>25</Beauty>
+			<Nutrition>0.2</Nutrition>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plants/Starbloom/Starbloom</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+		<plant>
+			<growDays>10</growDays>
+			<dieIfLeafless>true</dieIfLeafless>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>SWO_Starbloom</harvestedThingDef>
+			<immatureGraphicPath>Things/Plants/Starbloom/Starbloom_Immature</immatureGraphicPath>
+			<harvestYield>3</harvestYield>
+			<sowTags>
+				<li>Ground</li>
+				<li>Decorative</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<sowMinSkill>8</sowMinSkill>
+			<sowResearchPrerequisites>
+				<li>BasicChemistry</li>
+			</sowResearchPrerequisites>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>0.45~1</visualSizeRange>
+			<fertilitySensitivity>0.8</fertilitySensitivity>
+		</plant>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>3</glowRadius>
+				<glowColor>(250,218,142,1)</glowColor>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="CavePlantBase">
+		<defName>Plant_SoulFungus</defName>
+		<label>soul fungus</label>
+		<description>A mushroom with strange properties that are said to benefit the soul. Can be refined into useful chemicals.</description>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Beauty>5</Beauty>
+			<Nutrition>0.2</Nutrition>
+			<Flammability>1</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plants/SoulFungus/SoulFungus</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<altitudeLayer>Item</altitudeLayer>
+		<selectable>true</selectable>
+		<pathCost>15</pathCost>
+		<plant>
+			<neverBlightable>true</neverBlightable>
+			<growDays>9</growDays>
+			<wildOrder>1</wildOrder>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>SWO_SoulFungus</harvestedThingDef>
+			<immatureGraphicPath>Things/Plants/SoulFungus/SoulFungus_Immature</immatureGraphicPath>
+			<harvestYield>1</harvestYield>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<sowMinSkill>8</sowMinSkill>
+			<sowResearchPrerequisites>
+				<li>BasicChemistry</li>
+			</sowResearchPrerequisites>
+			<visualSizeRange>0.3~0.8</visualSizeRange>
+			<topWindExposure>0.1</topWindExposure>
+			<fertilitySensitivity>0.15</fertilitySensitivity>
+			<fertilityMin>0.01</fertilityMin>
+			<pollution>Any</pollution>
+		</plant>
+	</ThingDef>
+	
+</Defs>

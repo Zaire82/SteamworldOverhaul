@@ -59,7 +59,7 @@
         </prerequisites>
         <tab>SteamworldTab</tab>
         <researchViewX>3.00</researchViewX>
-        <researchViewY>2.0</researchViewY>
+        <researchViewY>1.50</researchViewY>
         <generalRules>
         <rulesStrings>
             <li>subject->steam generation</li>
@@ -84,7 +84,7 @@
         </prerequisites>
         <tab>SteamworldTab</tab>
         <researchViewX>3.00</researchViewX>
-        <researchViewY>2.50</researchViewY>
+        <researchViewY>2.00</researchViewY>
         <generalRules>
         <rulesStrings>
             <li>subject->steam network</li>
@@ -134,7 +134,7 @@
         </prerequisites>
         <tab>SteamworldTab</tab>
         <researchViewX>5.00</researchViewX>
-        <researchViewY>1.50</researchViewY>
+        <researchViewY>2.00</researchViewY>
         <generalRules>
         <rulesStrings>
             <li>subject->clockwork limbs</li>
@@ -198,5 +198,52 @@
         </rulesStrings>
         </generalRules>
     </ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BasicChemistry</defName>
+		<label>basic chemistry</label>
+		<description>Process raw ingredients into usable chemicals.</description>
+		<baseCost>650</baseCost>
+		<techLevel>Medieval</techLevel>
+		<tab>SteamworldTab</tab>
+		<researchViewX>1.00</researchViewX>
+		<researchViewY>3.5</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->basic chemistry</li>
+
+				<li>subject_story->dissolved the bodies of people who couldn't pay back their loans</li>
+				<li>subject_story->mixed two chemicals together that produced a nauscious gas</li>
+				<li>subject_story->researched old alchemnical books and realised how certain things didn't make sense</li>
+
+				<li>subject_gerund->basic chemical production</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>AeratusTonic</defName>
+		<label>aeratus tonic</label>
+		<description>Combine regents to produce life-saving aeratus tonic to combat against aeratic decay.</description>
+		<baseCost>700</baseCost>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>BasicChemistry</li>
+		</prerequisites>
+		<tab>SteamworldTab</tab>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>3.5</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->aeratus tonic</li>
+
+				<li>subject_story->got a stray arrow lodged in their body that couldn't be removed, later experiencing horrible pain</li>
+				<li>subject_story->wore so much brass jewellery that it seeped into their blood and caused it to rot</li>
+				<li>subject_story->worked producing tonics under a master chemist</li>
+
+				<li>subject_gerund->aeratus tonic production</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
 
 </Defs>

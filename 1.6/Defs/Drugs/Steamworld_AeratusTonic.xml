@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>AeratusTonic</defName>
+		<label>aeratus tonic</label>
+		<description>A miraculous substance that cures the effect of implants on the body.</description>
+		<descriptionHyperlinks>
+			<HediffDef>AeratusTonicHediff</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Manufactured/SWO_AeratusTonic</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<stackLimit>25</stackLimit>
+		<statBases>
+			<WorkToMake>150</WorkToMake>
+			<MarketValue>95</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<techLevel>Medieval</techLevel>
+		<ingestible>
+			<drugCategory>Medical</drugCategory>
+			<foodType>Processed, Fluid</foodType>
+			<baseIngestTicks>80</baseIngestTicks>
+			<ingestSound>Ingest_Beer</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<chairSearchRadius>0</chairSearchRadius>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AeratusTonicHediff</hediffDef>
+					<severity>1.0</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>AeratusTonic</researchPrerequisite>
+			<recipeUsers>
+				<li>ChemistryTable</li>
+			</recipeUsers>
+			<soundWorking>Recipe_Drug</soundWorking>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+				<Intellectual>4</Intellectual>
+			</skillRequirements>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		</recipeMaker>
+		<costList>
+			<SWO_GlowVial>1</SWO_GlowVial>
+			<SWO_SoulVial>1</SWO_SoulVial>
+			<MedicineHerbal>3</MedicineHerbal>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<hediffDef>
+		<defName>AeratusTonicHediff</defName>
+		<label>aeratus tonic</label>
+		<description>A miraculous substance that cures the effect of implants on the body and mildly reduces pain.</description>
+		<defaultLabelColor>(250,215,120)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<painFactor>0.95</painFactor>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+				<disappearsAfterTicks>180000</disappearsAfterTicks> <!--3 days (1 day = 60,000 ticks)-->
+			</li>
+		</comps>
+	</hediffDef>
+	
+</Defs>
