@@ -7,6 +7,25 @@
         <defaultLabelColor>(181, 141, 60)</defaultLabelColor>
     </HediffDef>
 
+	<HediffDef Name="ClockworkOrganBase" ParentName="ClockworkBodyPartBase" Abstract="True">
+		<stages>
+			<li>
+				<hediffGivers>
+					<li Class="SWO_Steamworld.HediffGiver_AeraticDecay">
+						<hediff>AeraticDecay</hediff>
+						<cure>AeratusTonicHediff</cure>
+						<hediffType>clockwork</hediffType>
+						<severityPerDay>0.2</severityPerDay>
+						<allowOnLodgers>false</allowOnLodgers>
+						<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+						<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
+						<allowOnBeggars>false</allowOnBeggars>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+
     <ThingDef Name="BodyPartClockworkBase" ParentName="BodyPartBase" Abstract="True">
         <techLevel>Medieval</techLevel>
         <thingCategories>
@@ -334,7 +353,7 @@
 
     <!-- Clockwork Lung -->
 
-  <HediffDef ParentName="ClockworkBodyPartBase">
+  <HediffDef ParentName="ClockworkOrganBase">
     <defName>SWO_LeatherLung</defName>
     <label>leather lung</label>
     <labelNoun>a leather lung</labelNoun>
@@ -397,7 +416,7 @@
 
     <!-- Clockwork Heart Pacer -->
 
-  <HediffDef ParentName="ClockworkBodyPartBase">
+  <HediffDef ParentName="ClockworkOrganBase">
     <defName>SWO_ClockworkHeartPacer</defName>
     <label>clockwork heart pacer</label>
     <labelNoun>a clockwork heart pacer</labelNoun>

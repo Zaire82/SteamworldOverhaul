@@ -221,4 +221,29 @@
 		</generalRules>
 	</ResearchProjectDef>
 
+	<ResearchProjectDef>
+		<defName>AeratusTonic</defName>
+		<label>aeratus tonic</label>
+		<description>Combine regents to produce life-saving aeratus tonic to combat against aeratic decay.</description>
+		<baseCost>700</baseCost>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>BasicChemistry</li>
+		</prerequisites>
+		<tab>SteamworldTab</tab>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>3.5</researchViewY>
+		<generalRules>
+			<rulesStrings>
+				<li>subject->aeratus tonic</li>
+
+				<li>subject_story->got a stray arrow lodged in their body that couldn't be removed, later experiencing horrible pain</li>
+				<li>subject_story->wore so much brass jewellery that it seeped into their blood and caused it to rot</li>
+				<li>subject_story->worked producing tonics under a master chemist</li>
+
+				<li>subject_gerund->aeratus tonic production</li>
+			</rulesStrings>
+		</generalRules>
+	</ResearchProjectDef>
+
 </Defs>

@@ -4,4 +4,6 @@
 	<SWO_SteamValve>Designate toggle steam flow</SWO_SteamValve>
 	<SWO_SteamValveDesc>Designate this thing to have steam flow toggled. A pawn will come soon to twist the valve.</SWO_SteamValveDesc>
 
+	<SWO_CureAeraticDecay>{0} has treated {1}'s aeratic decay.</SWO_CureAeraticDecay>
+	
 </LanguageData>

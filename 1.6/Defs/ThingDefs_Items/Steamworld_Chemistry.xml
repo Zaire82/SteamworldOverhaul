@@ -13,8 +13,8 @@
 		<soundDrop>ChunkRock_Drop</soundDrop>
 		<statBases>
 			<MaxHitPoints>75</MaxHitPoints>
-			<MarketValue>135</MarketValue>
-			<Mass>0.5</Mass>
+			<MarketValue>35</MarketValue>
+			<Mass>0.1</Mass>
 			<Flammability>1</Flammability>
 		</statBases>
 		<stackLimit>10</stackLimit>
@@ -29,7 +29,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>SWO_SoulVial</defName>
 		<label>soul vial</label>
-		<description>A transluscent liquid produced from soul fungus. Can be used at the chemistry table.</description>
+		<description>A liquid produced from soul fungus. Can be used at the chemistry table.</description>
 		<graphicData>
 			<texPath>Things/Item/Manufactured/SWO_SoulVial/SWO_SoulVial</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -38,8 +38,8 @@
 		<soundDrop>ChunkRock_Drop</soundDrop>
 		<statBases>
 			<MaxHitPoints>75</MaxHitPoints>
-			<MarketValue>135</MarketValue>
-			<Mass>0.5</Mass>
+			<MarketValue>45</MarketValue>
+			<Mass>0.1</Mass>
 			<Flammability>1</Flammability>
 		</statBases>
 		<stackLimit>10</stackLimit>

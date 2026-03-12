@@ -1,0 +1,7 @@
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\SteamworldOverhaul\Source\SteamworldSource\bin\Release\SteamworldSource.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\SteamworldOverhaul\Source\SteamworldSource\bin\Release\SteamworldSource.pdb
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\SteamworldOverhaul\Source\SteamworldSource\obj\Release\SteamworldSource.csproj.AssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\SteamworldOverhaul\Source\SteamworldSource\obj\Release\SteamworldSource.csproj.CoreCompileInputs.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\SteamworldOverhaul\Source\SteamworldSource\obj\Release\SteamworldSource.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\SteamworldOverhaul\Source\SteamworldSource\obj\Release\SteamworldSource.pdb
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\SteamworldOverhaul\1.6\Assemblies\SteamworldSource.dll
