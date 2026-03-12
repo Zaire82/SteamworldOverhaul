@@ -357,7 +357,7 @@
     <defName>SWO_BrassBloodOxygenator</defName>
     <label>brass blood oxygenator</label>
     <labelNoun>a brass blood oxygenator</labelNoun>
-    <description>A mechanical surrogate for a lung. Pulls air through a vent on the chest and filters out nitrogen with a molecular sieve before binding the remaining oxygen to blood.\n\nThe minerals in this implant have a chance of causing Carcinoma in remaining organic lungs.</description>
+    <description>A mechanical surrogate for a lung. Pulls air through a vent on the chest and filters out nitrogen with a molecular sieve before binding the remaining oxygen to blood.\n\nIt uses carcinogenic minerals that may affect remaining organic lungs.</description>
     <descriptionHyperlinks><ThingDef>SWO_BrassBloodOxygenator</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>SWO_BrassBloodOxygenator</spawnThingOnRemoved>
     <addedPartProps>
@@ -383,7 +383,7 @@
   <ThingDef ParentName="BodyPartClockworkOrganMakeableBase">
     <defName>SWO_BrassBloodOxygenator</defName>
     <label>brass blood oxygenator</label>
-    <description>An installed brass blood oxygenator. Pulls air through a vent on the chest and filters out nitrogen with a molecular sieve before binding the remaining oxygen to blood.</description>
+    <description>An installed brass blood oxygenator. Pulls air through a vent on the chest and filters out nitrogen with a molecular sieve before binding the remaining oxygen to blood.\n\nIt uses carcinogenic minerals that may affect remaining organic lungs.</description>
     <descriptionHyperlinks><RecipeDef>Install_SWO_BrassBloodOxygenator</RecipeDef></descriptionHyperlinks>
     <costList>
       <SWO_Spring>2</SWO_Spring>
