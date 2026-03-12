@@ -354,27 +354,42 @@
     <!-- Clockwork Lung -->
 
   <HediffDef ParentName="ClockworkOrganBase">
-    <defName>SWO_LeatherLung</defName>
-    <label>leather lung</label>
-    <labelNoun>a leather lung</labelNoun>
-    <description>An installed leather lung. Through crude mechanisms, it immitates the function of a real lung and oxygenates blood.</description>
-    <descriptionHyperlinks><ThingDef>SWO_LeatherLung</ThingDef></descriptionHyperlinks>
-    <spawnThingOnRemoved>SWO_LeatherLung</spawnThingOnRemoved>
+    <defName>SWO_BrassBloodOxygenator</defName>
+    <label>brass blood oxygenator</label>
+    <labelNoun>a brass blood oxygenator</labelNoun>
+    <description>A mechanical surrogate for a lung. Pulls air through a vent on the chest and filters out nitrogen with a molecular sieve before binding the remaining oxygen to blood.\n\nThe minerals in this implant have a chance of causing Carcinoma in remaining organic lungs.</description>
+    <descriptionHyperlinks><ThingDef>SWO_BrassBloodOxygenator</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>SWO_BrassBloodOxygenator</spawnThingOnRemoved>
     <addedPartProps>
       <solid>true</solid>
       <partEfficiency>0.5</partEfficiency>
     </addedPartProps>
+	<stages>
+		  <li>
+			  <minSeverity>0.001</minSeverity>
+			  <hediffGivers>
+				  <li Class="HediffGiver_Random">
+					  <hediff>Carcinoma</hediff>
+					  <mtbDays>111</mtbDays>
+					  <partsToAffect>
+						  <li>Lung</li>
+					  </partsToAffect>
+				  </li>
+			  </hediffGivers>
+		  </li>
+	</stages>
   </HediffDef>
 
   <ThingDef ParentName="BodyPartClockworkOrganMakeableBase">
-    <defName>SWO_LeatherLung</defName>
-    <label>leather lung</label>
-    <description>An installed leather lung. Through crude mechanisms, it immitates the function of a real lung and oxygenates blood.</description>
-    <descriptionHyperlinks><RecipeDef>Install_SWO_LeatherLung</RecipeDef></descriptionHyperlinks>
+    <defName>SWO_BrassBloodOxygenator</defName>
+    <label>brass blood oxygenator</label>
+    <description>An installed brass blood oxygenator. Pulls air through a vent on the chest and filters out nitrogen with a molecular sieve before binding the remaining oxygen to blood.</description>
+    <descriptionHyperlinks><RecipeDef>Install_SWO_BrassBloodOxygenator</RecipeDef></descriptionHyperlinks>
     <costList>
       <SWO_Spring>2</SWO_Spring>
-      <SWO_Brass>10</SWO_Brass>
-      <SWO_TreatedLeather>50</SWO_TreatedLeather>
+	  <SWO_Gear>2</SWO_Gear>
+      <SWO_Brass>20</SWO_Brass>
+      <SWO_TreatedLeather>30</SWO_TreatedLeather>
     </costList>
     <statBases>
       <Mass>5</Mass>
@@ -385,19 +400,19 @@
   </ThingDef>
 
   <RecipeDef ParentName="SurgeryInstallBodyPartClockworkBase">
-    <defName>Install_SWO_LeatherLung</defName>
-    <label>install leather lung</label>
-    <description>Install a leather lung.</description>
+    <defName>Install_SWO_BrassBloodOxygenator</defName>
+    <label>install brass blood oxygenator</label>
+    <description>Install a brass blood oxygenator.</description>
     <descriptionHyperlinks>
-      <ThingDef>SWO_LeatherLung</ThingDef>
-      <HediffDef>SWO_LeatherLung</HediffDef>
+      <ThingDef>SWO_BrassBloodOxygenator</ThingDef>
+      <HediffDef>SWO_BrassBloodOxygenator</HediffDef>
     </descriptionHyperlinks>
-    <jobString>Installing leather lung.</jobString>
+    <jobString>Installing brass blood oxygenator.</jobString>
     <ingredients>
       <li>
         <filter>
           <thingDefs>
-            <li>SWO_LeatherLung</li>
+            <li>SWO_BrassBloodOxygenator</li>
           </thingDefs>
         </filter>
         <count>1</count>
@@ -405,13 +420,13 @@
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>SWO_LeatherLung</li>
+        <li>SWO_BrassBloodOxygenator</li>
       </thingDefs>
     </fixedIngredientFilter>
     <appliedOnFixedBodyParts>
       <li>Lung</li>
     </appliedOnFixedBodyParts>
-    <addsHediff>SWO_LeatherLung</addsHediff>
+    <addsHediff>SWO_BrassBloodOxygenator</addsHediff>
   </RecipeDef>
 
     <!-- Clockwork Heart Pacer -->
@@ -420,7 +435,7 @@
     <defName>SWO_ClockworkHeartPacer</defName>
     <label>clockwork heart pacer</label>
     <labelNoun>a clockwork heart pacer</labelNoun>
-    <description>An installed clockwork heart pacer. Through crude mechanisms, it replicates the functions of a natural heart. \nThis is temporary measure for preserving life, replacing with a donor heart is recommended.</description>
+    <description>An installed clockwork heart pacer. Through crude mechanisms and pumps, it replicates the functions of a natural heart. \nThis is temporary measure for preserving life, replacing with a donor heart is recommended.</description>
     <descriptionHyperlinks><ThingDef>SWO_ClockworkHeartPacer</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>SWO_ClockworkHeartPacer</spawnThingOnRemoved>
     <addedPartProps>
@@ -431,12 +446,13 @@
   <ThingDef ParentName="BodyPartClockworkOrganMakeableBase">
     <defName>SWO_ClockworkHeartPacer</defName>
     <label>clockwork heart pacer</label>
-    <description>An installed clockwork heart pacer. Through crude mechanisms, it replicates the functions of a natural heart. \nThis is temporary measure for preserving life, replacing with a donor heart is recommended.</description>
+    <description>An installed clockwork heart pacer. Through crude mechanisms and pumps, it replicates the functions of a natural heart. \nThis is temporary measure for preserving life, replacing with a donor heart is recommended.</description>
     <descriptionHyperlinks><RecipeDef>Install_SWO_ClockworkHeartPacer</RecipeDef></descriptionHyperlinks>
     <costList>
       <SWO_Gear>5</SWO_Gear>
       <SWO_Spring>3</SWO_Spring>
       <SWO_Brass>15</SWO_Brass>
+	  <SWO_TreatedLeather>10</SWO_TreatedLeather>
     </costList>
     <statBases>
       <Mass>5</Mass>
