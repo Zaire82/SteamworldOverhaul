@@ -3,18 +3,12 @@
   "WorkspaceRootPath": "D:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\SteamworldOverhaul\\Source\\SteamworldSource\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|SteamworldSource||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C23D5F38-F989-4DE6-99AA-01F1659EFB45}|SteamworldSource.csproj|d:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\steamworldoverhaul\\source\\steamworldsource\\hediffgiver_aeraticdecay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C23D5F38-F989-4DE6-99AA-01F1659EFB45}|SteamworldSource.csproj|D:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\SteamworldOverhaul\\Source\\SteamworldSource\\hediffgiver_aeraticdecay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C23D5F38-F989-4DE6-99AA-01F1659EFB45}|SteamworldSource.csproj|solutionrelative:hediffgiver_aeraticdecay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C23D5F38-F989-4DE6-99AA-01F1659EFB45}|SteamworldSource.csproj|d:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\steamworldoverhaul\\source\\steamworldsource\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C23D5F38-F989-4DE6-99AA-01F1659EFB45}|SteamworldSource.csproj|D:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\SteamworldOverhaul\\Source\\SteamworldSource\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C23D5F38-F989-4DE6-99AA-01F1659EFB45}|SteamworldSource.csproj|solutionrelative:properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C23D5F38-F989-4DE6-99AA-01F1659EFB45}|SteamworldSource.csproj|d:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\steamworldoverhaul\\source\\steamworldsource\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|a54ad834-9219-4aa6-b589-607af21c3e26"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,11 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 251,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "D:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\SteamworldOverhaul\\Source\\SteamworldSource\\Properties\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "Properties\\AssemblyInfo.cs",
@@ -37,20 +31,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-11T21:59:53.15Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SteamworldSource",
-              "DocumentMoniker": "D:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\SteamworldOverhaul\\Source\\SteamworldSource\\SteamworldSource.csproj",
-              "RelativeDocumentMoniker": "SteamworldSource.csproj",
-              "ToolTip": "D:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\SteamworldOverhaul\\Source\\SteamworldSource\\SteamworldSource.csproj",
-              "RelativeToolTip": "SteamworldSource.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-11T23:32:28.133Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -74,13 +55,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "HediffGiver_AeraticDecay.cs",
               "DocumentMoniker": "D:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\SteamworldOverhaul\\Source\\SteamworldSource\\HediffGiver_AeraticDecay.cs",
               "RelativeDocumentMoniker": "HediffGiver_AeraticDecay.cs",
               "ToolTip": "D:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\SteamworldOverhaul\\Source\\SteamworldSource\\HediffGiver_AeraticDecay.cs",
               "RelativeToolTip": "HediffGiver_AeraticDecay.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-11T21:54:07.385Z",
               "EditorCaption": ""
