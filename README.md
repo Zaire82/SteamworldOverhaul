@@ -1,7 +1,7 @@
 # SteamworldOverhaul [WIP]
 Spiritual successor to Clockwork and Steam mod for rimworld.
 
-This mod is not a remaster, remake, or fork of Clockwork and Steam. 
+This mod is not a remaster or fork of Clockwork and Steam. 
 It has been implemented from scratch while taking significant inspiration from Clockwork and Steam, as well as some other mods with the steamwork/clockwork theme to a lesser degree.
 
 Features in this mod are not 1-to-1 reproductions of the features in Clockwork and Steam. 
